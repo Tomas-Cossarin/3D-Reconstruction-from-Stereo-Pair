@@ -1,6 +1,6 @@
 # 3D Reconstruction from Stereo Pair
 
-![3d_visualization_of_image_points](3d_visualization_of_image_points.png)
+![first_image](first_image.png)
 
 The objective of this program was to use an experimental methd to perform a 3D reconstruction from a stereo pair of images with known camera calibration parameters.
 
