@@ -2,7 +2,7 @@
 
 ![first_image](first_image.png)
 
-The objective of this program was to use an experimental methd to perform a 3D reconstruction from a stereo pair of images with known camera calibration parameters.
+The objective of this program was to use an experimental method to perform a 3D reconstruction from only a stereo pair of images with known camera calibration parameters.
 
 Another goal was to limit the use of libraries, with only OpenCV being used for basic computer vision functions.
 
