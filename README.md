@@ -1,6 +1,6 @@
 # 3D Reconstruction from Stereo Pair
 
-![3d_visualization_of_image_points](3d_visualization_of_image_points.jpg){ width=50% }
+<img src="3d_visualization_of_image_points.jpg" alt="3d_visualization_of_image_points" width="200"/>
 
 The objective of this program was to use an experimental methd to perform a 3D reconstruction from a stereo pair of images with known camera calibration parameters.
 
@@ -8,9 +8,10 @@ Another goal was to limit the use of libraries, with only OpenCV being used for 
 
 The input left and right images are shown below:
 
-| Left Image                               | Right Image                              |
-| ---------------------------------------- | ---------------------------------------- |
-| ![imL](imL.jpg) | ![imR](imR.jpg) |
+<p float="left">
+  <img src="imL.jpg" width="400" />
+  <img src="imR.jpg" width="400" /> 
+</p>
 
 
 ## Step 1: Compute initial transform
