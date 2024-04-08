@@ -1,21 +1,23 @@
 # 3D Reconstruction from Stereo Pair
 
+![3d_visualization_of_image_points](3d_visualization_of_image_points.jpg){ width=50% }
+
 The objective of this program was to use an experimental methd to perform a 3D reconstruction from a stereo pair of images with known camera calibration parameters.
 
 Another goal was to limit the use of libraries, with only OpenCV being used for basic computer vision functions.
 
 The input left and right images are shown below:
 
-<div style="display: flex;">
-    <img src="imL.jpg" alt="imL" style="width: 45%;">
-    <img src="imR.jpg" alt="imR" style="width: 45%;">
-</div>
+| Left Image                               | Right Image                              |
+| ---------------------------------------- | ---------------------------------------- |
+| ![imL](imL.jpg) | ![imR](imR.jpg) |
 
-## Step 1: Compute initail transform
+
+## Step 1: Compute initial transform
 A homography matrix to roughly transform from the left to the right image was computed. This was done using SIFT detect features, FLANN to match them.
 
 ## Step 2: Feature matching
-A tighly-spaced grid of overlapping feature templates was created on the left image. Next, the homography matrix was used roughly transform the template locations onto the right image. These locations were used to determine a search area in the right image for the template. The arrows in the figure below show where each feature was detected and where the search area was centered. The images closer to the camera have the longest disparity as shown by the arrows.
+A tighly-spaced grid of overlapping feature templates was created on the left image. Smooth featureless surfaces were ignored. Next, the homography matrix was used roughly transform the template locations onto the right image. These locations were used to determine a search area in the right image for the template. The arrows in the figure below show where each feature was detected and where the search area was centered. The objects closer to the camera have the longest disparity as shown by the arrows.
 
 ![searches_plot](searches_plot.png)
 
